@@ -18,6 +18,7 @@ public class EnemyX : MonoBehaviour
         enemyRb = GetComponent<Rigidbody>();
         playerGoal = GameObject.Find("Player Goal");
         spawnManagerXScript = GameObject.Find("Spawn Manager").GetComponent<SpawnManagerX>();
+        //gebruikt voor speed de waarde van enemySpeed uit het spawnmanagerscript
         speed = spawnManagerXScript.enemySpeed;
     }
 
@@ -40,6 +41,8 @@ public class EnemyX : MonoBehaviour
         else if (other.gameObject.name == "Player Goal")
         {
             Destroy(gameObject);
+            //spawnManagerXScript.waveCount = 1;
+            speed = 50;
         }
 
     }

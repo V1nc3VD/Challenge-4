@@ -27,6 +27,7 @@ public class SpawnManagerX : MonoBehaviour
         {
             SpawnEnemyWave(waveCount);
             waveCount++;
+            enemySpeed++;
         }
 
     }
